@@ -1,10 +1,20 @@
-import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
+import React from "react";
+import { router } from "expo-router";
+import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons";
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
+      <Text>Shopping</Text>
+      <TouchableOpacity
+        onPress={() => {
+          router.navigate({ pathname: "browser" });
+        }}
+      >
+        <Text>Go To Browser</Text>
+      </TouchableOpacity>
+      <MaterialCommunityIcons name="shopping" size={24} color="black" />
     </View>
   );
 }
