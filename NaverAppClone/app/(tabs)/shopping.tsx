@@ -1,9 +1,14 @@
-import {View, Text, StyleSheet} from 'react-native';
+import {router} from 'expo-router';
+import {View, Text, StyleSheet, Button} from 'react-native';
 
-export default function Tab() {
+export default function ShoppingScreen() {
   return (
     <View style={styles.container}>
-      <Text>Tab [Home|Shopping]</Text>
+      <Text>Shopping</Text>
+      <Button
+        onPress={() => router.navigate({pathname: 'browser'})}
+        title="Go to Browser"
+      />
     </View>
   );
 }
