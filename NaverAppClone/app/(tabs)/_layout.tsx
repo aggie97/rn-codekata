@@ -1,5 +1,6 @@
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 import {Tabs} from 'expo-router';
+import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
 
 export default function TabLayout() {
   return (
@@ -14,11 +15,11 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="settings"
+        name="shopping"
         options={{
-          title: 'Settings',
+          title: 'Shopping',
           tabBarIcon: ({color}) => (
-            <FontAwesome size={28} name="cog" color={color} />
+            <MaterialCommunityIcons name="shopping" size={24} color="black" />
           ),
         }}
       />
